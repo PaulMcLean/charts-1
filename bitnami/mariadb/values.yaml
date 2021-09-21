@@ -96,7 +96,7 @@ auth:
   ## @param auth.rootPassword Password for the `root` user. Ignored if existing secret is provided.
   ## ref: https://github.com/bitnami/bitnami-docker-mariadb#setting-the-root-password-on-first-run
   ##
-  rootPassword: ""
+  rootPassword: "Wb@8sLR<d"
   ## @param auth.database Name for a custom database to create
   ## ref: https://github.com/bitnami/bitnami-docker-mariadb/blob/master/README.md#creating-a-database-on-first-run
   ##
@@ -104,10 +104,10 @@ auth:
   ## @param auth.username Name for a custom user to create
   ## ref: https://github.com/bitnami/bitnami-docker-mariadb/blob/master/README.md#creating-a-database-user-on-first-run
   ##
-  username: ""
+  username: "paulm"
   ## @param auth.password Password for the new user. Ignored if existing secret is provided
   ##
-  password: ""
+  password: "Wb@8sLR<d"
   ## @param auth.replicationUser MariaDB replication user
   ## ref: https://github.com/bitnami/bitnami-docker-mariadb#setting-up-a-replication-cluster
   ##
@@ -241,7 +241,7 @@ primary:
   ## @param primary.nodeSelector Node labels for MariaDB primary pods assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector: {}
+  nodeSelector: { deploymenthostname: jose }
   ## @param primary.tolerations Tolerations for MariaDB primary pods assignment
   ## Ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
   ##
@@ -373,7 +373,7 @@ primary:
     ## @param primary.persistence.existingClaim Name of an existing `PersistentVolumeClaim` for MariaDB primary replicas
     ## NOTE: When it's set the rest of persistence parameters are ignored
     ##
-    existingClaim: ""
+    existingClaim: "maria-pv-claim"
     ## @param primary.persistence.subPath Subdirectory of the volume to mount at
     ##
     subPath: ""
